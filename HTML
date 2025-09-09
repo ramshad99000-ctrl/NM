@@ -1,0 +1,165 @@
+
+<header>
+  <h1>MOHAMMED RAMSHAD</h1>
+  <p>Web Developer | Designer </p>
+</header>
+
+<nav>
+  <a onclick="showSection('about')">About</a>
+  <a onclick="showSection('projects')">Projects</a>
+  <a onclick="showSection('contact')">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I'm MOHAMMED RAMSHAD, a passionate web developer with experience in building responsive and user-friendly websites.</p>
+</section>
+
+<section id="projects" style="display: none;">
+  <h2>My Projects</h2>
+  <div class="project">
+    <h3>Portfolio Website</h3>
+    <p>A personal website to showcase my skills and projects. Built using HTML, CSS, and JavaScript.</p>
+  </div>
+  <div class="project">
+    <h3>Todo App</h3>
+    <p>A simple todo list application with local storage using JavaScript.</p>
+  </div>
+  <div class="project">
+    <h3>Weather Dashboard</h3>
+    <p>An app that fetches and displays weather data using a public API with responsive UI.</p>
+  </div>
+  <div class="project">
+    <h3>Blog Platform</h3>
+    <p>A simple blogging platform with user authentication and CRUD functionality built using React and Firebase.</p>
+  </div>
+</section>
+
+<section id="contact" style="display: none;">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out via email at: <strong>azadashkar503@gmail.com</strong></p>
+  <button onclick="alert('Thanks for reaching out!')">Send Message</button>
+</section>
+
+<footer>
+  <p>© 2025 MOHAMMED RAMSHAD. All rights reserved.</p>
+</footer>
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fff8f0; /* Creamy soft background */
+  color: #5a4d3c; /* Warm brown text */
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+header {
+  background-color: #f5e9da; /* Light cream */
+  color: #6b5a45; /* Slightly darker brown */
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(229, 214, 197, 0.5);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background: #e7d9c5; /* Soft beige */
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(231, 217, 197, 0.5);
+  transition: background-color 0.4s ease;
+}
+
+nav a {
+  color: #6b5a45;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #cbb594; /* Deeper cream/tan */
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 50px 25px;
+  max-width: 850px;
+  margin: 40px auto;
+  background: #fffaf0; /* Off-white cream */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(166, 142, 107, 0.15);
+  transition: box-shadow 0.4s ease;
+}
+
+section:hover {
+  box-shadow: 0 12px 32px rgba(166, 142, 107, 0.25);
+}
+
+h2 {
+  color: #9c7a4f; /* Warm goldish brown */
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1.1px;
+}
+
+.project {
+  margin-bottom: 25px;
+  padding: 20px;
+  border-left: 6px solid #cbb594; /* Creamy border accent */
+  background: #fff3dd; /* Light cream background */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project:hover {
+  background-color: #f0e1b9;
+  transform: translateX(10px);
+}
+
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  background: #f5e9da;
+  color: #6b5a45;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  margin-top: 60px;
+}
+
+button {
+  background-color: #cbb594;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(203, 181, 148, 0.5);
+  transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #9c7a4f;
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(156, 122, 79, 0.7);
+}
+
+
+
+function showSection(sectionId) {
+  const sections = document.querySelectorAll("section");
+  sections.forEach(section => {
+    section.style.display = "none";
+  });
+  document.getElementById(sectionId).style.display = "block";
+}
